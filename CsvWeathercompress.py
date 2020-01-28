@@ -19,8 +19,7 @@ for file_, stationId in zip(all_files, names):
     file_df['stationId'] = stationId
     print("Csv-Daten-frame der Station-Id: {} wird importiert".format(stationId))
     df = df.append(file_df)
-
-df.to_csv(r'E:\CSV_Container\BIG-CSV_Col-stationId.csv', encoding="utf8") # # input-path
-
+    
+print("Die Datei wird geschrieben ")
+df.to_csv(r'E:\CSV_Container\BIG-CSV_Col-stationId.csv', encoding="utf8") # # output-path
 print("Die Datei 'BIG-CSV_Col-stationId.csv' ist fertig! ")
-
