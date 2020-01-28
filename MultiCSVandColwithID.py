@@ -7,9 +7,7 @@ from tkinter import filedialog
 
 
 
-
-
-path = r'E:\BackHandData'
+path = r'Quellpath der CSV-files'
 all_files = glob.glob(os.path.join(path, "*.csv"))
 names = [os.path.basename(x).split('.')[-2] for x in all_files]
 
@@ -28,11 +26,5 @@ for file_, stationId in zip(all_files, names):
 
 df.to_csv(r'E:\CSV_Container\BIG-CSV_Col-stationId.csv', encoding="utf8")
 
-
-
-print(f"{bcolors.WARNING}Warning: No active frommets remain. Continue?{bcolors.ENDC}")
 print("Die Datei 'BIG-CSV_Col-stationId.csv' ist fertig! ")
-
-# export_csv = df.to_csv (r'E:\CSV_Container\export_dataframe.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
-#print(df)
 
